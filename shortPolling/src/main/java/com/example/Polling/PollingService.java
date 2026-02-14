@@ -48,6 +48,7 @@ public class PollingService {
                 System.out.println("Status is still RUNNING, time: " + currentTime.format(dateTimeFormatter));
                 try {
                     Thread.sleep(pollIntervalMillis);
+
                 } catch (InterruptedException eX) {
                     System.out.println("Interrupted while waiting for job status");
                     return "INTERRUPTED";
